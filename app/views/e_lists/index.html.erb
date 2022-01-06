@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>E Lists</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Was?</th>
+      <th>Menge</th>
+      <th>Wo?</th>
+      <th>Done</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @e_lists.each do |e_list| %>
+      <tr>
+        <td><%= e_list.Was? %></td>
+        <td><%= e_list.Menge %></td>
+        <td><%= e_list.Wo? %></td>
+        <td><%= e_list.Done %></td>
+        <td><%= link_to 'Show', e_list %></td>
+        <td><%= link_to 'Edit', edit_e_list_path(e_list) %></td>
+        <td><%= link_to 'Destroy', e_list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New E List', new_e_list_path %>

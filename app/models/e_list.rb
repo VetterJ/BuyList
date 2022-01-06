@@ -1,0 +1,2 @@
+class EList < ApplicationRecord
+end

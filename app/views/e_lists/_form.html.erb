@@ -1,0 +1,37 @@
+<%= form_with(model: e_list, local: true) do |form| %>
+  <% if e_list.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(e_list.errors.count, "error") %> prohibited this e_list from being saved:</h2>
+
+      <ul>
+      <% e_list.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Was? %>
+    <%= form.text_field :Was?, id: :e_list_Was? %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Menge %>
+    <%= form.text_field :Menge, id: :e_list_Menge %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Wo? %>
+    <%= form.text_field :Wo?, id: :e_list_Wo? %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Done %>
+    <%= form.check_box :Done, id: :e_list_Done %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

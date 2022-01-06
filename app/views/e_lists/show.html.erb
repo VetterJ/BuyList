@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Was?:</strong>
+  <%= @e_list.Was? %>
+</p>
+
+<p>
+  <strong>Menge:</strong>
+  <%= @e_list.Menge %>
+</p>
+
+<p>
+  <strong>Wo?:</strong>
+  <%= @e_list.Wo? %>
+</p>
+
+<p>
+  <strong>Done:</strong>
+  <%= @e_list.Done %>
+</p>
+
+<%= link_to 'Edit', edit_e_list_path(@e_list) %> |
+<%= link_to 'Back', e_lists_path %>
